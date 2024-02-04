@@ -69,5 +69,10 @@ void stream_fail_error(char *file_name);
 void get_stream(char *file_name);
 void malloc_error(void);
 void line_tokenization(void);
+void free_token(void);
+void instruction_not_valid(void);
+void stream_exit(void);
+void free_args(void);
+void run_instruction(void);
 
 #endif /* MONTY_H */
