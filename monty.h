@@ -84,5 +84,6 @@ void free_top(void);
 void free_stack(stack_t *top);
 void push(stack_t **stack, unsigned int line_num);
 void pall(stack_t **stack, unsigned int line_num);
+void pint(stack_t **stack, unsigned int line_num);
 
 #endif /* MONTY_H */
