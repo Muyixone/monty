@@ -42,6 +42,11 @@ typedef struct instruction_s
   * struct var_arg - variable stream
   * @string_line : Readable strings from each line of stream
   * @stream : Pointer to a File
+  * @string_line_num : for monitoring the line number of each
+  * string being read
+  * @token : stores tokens from each string_line
+  * @num_token : number of tokens
+  * @instruction : an instruction from a line
   * Description: A struct of global variable that will be accessible
   * by various functions and also dynamically allocated memory
 */
@@ -49,6 +54,10 @@ typedef struct var_arg
 {
 	char *string_line;
 	FILE *stream;
+	char **token;
+	int num_token;
+	unsigned int string_line_num;
+	instruction_t *instruction;
 } args;
 
 extern args *args_params;
@@ -57,5 +66,6 @@ void check_args(int argc);
 void declare_args(void);
 void stream_fail_error(char *file_name);
 void get_stream(char *file_name);
+void malloc_error(void);
 
 #endif /* MONTY_H */
