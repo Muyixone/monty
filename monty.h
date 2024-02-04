@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
 /**
@@ -67,5 +68,6 @@ void declare_args(void);
 void stream_fail_error(char *file_name);
 void get_stream(char *file_name);
 void malloc_error(void);
+void line_tokenization(void);
 
 #endif /* MONTY_H */
