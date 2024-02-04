@@ -34,3 +34,24 @@ void line_tokenization(void)
 	args_params->token[i] = NULL;
 	free(line_copy);
 }
+
+/**
+  * free_token - Frees all dynamically allocated memory of the token
+*/
+
+void free_token(void)
+{
+	int i = 0;
+
+	if (args_params->token == NULL)
+		return;
+
+	while (args_params->token[i])
+	{
+		free(args_params->token[i]);
+		i++;
+	}
+
+	free(args_params->token);
+	args_params->token = NULL;
+}
