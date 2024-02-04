@@ -13,7 +13,7 @@ void pall(stack_t **stack, unsigned int line_num)
 
 	if (args_params->head == NULL)
 		return;
-	
+
 	(void) line_num;
 	(void) stack;
 
