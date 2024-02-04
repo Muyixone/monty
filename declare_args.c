@@ -17,6 +17,8 @@ void declare_args(void)
 
 	args_params->stream = NULL;
 	args_params->string_line = NULL;
-	args_params->num_tokens = 0;
+	args_params->num_token = 0;
 	args_params->string_line_num = 0;
+	args_params->head = 0;
+	args_params->stack_length = 0;
 }

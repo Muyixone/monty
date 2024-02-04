@@ -20,8 +20,8 @@ void instruction_not_valid(void)
 {
 	dprintf(2, "L%d: unknown instruction %s\n", args_params->string_line_num,
 			args_params->token[0]);
-	stream_end();
+	stream_exit();
 	free_token();
-	free_args();
+	/*free_args();*/
 	exit(EXIT_FAILURE);
 }

@@ -2,7 +2,7 @@
 /**
   * check_args - Checks the number of command
   * line arguments.
-  * argc: Number of arguments passed to the 
+  * @argc: Number of arguments passed to the
   * command line
 */
 

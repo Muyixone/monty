@@ -57,11 +57,15 @@ typedef struct var_arg
 	FILE *stream;
 	char **token;
 	int num_token;
+	int stack_length;
 	unsigned int string_line_num;
 	instruction_t *instruction;
+	struct stack_s *head;
 } args;
 
 extern args *args_params;
+
+int is_int(char *val);
 
 void check_args(int argc);
 void declare_args(void);
@@ -73,6 +77,12 @@ void free_token(void);
 void instruction_not_valid(void);
 void stream_exit(void);
 void free_args(void);
+void get_instruction(void);
 void run_instruction(void);
+void free_args(void);
+void free_top(void);
+void free_stack(stack_t *top);
+void push(stack_t **stack, unsigned int line_num);
+void pall(stack_t **stack, unsigned int line_num);
 
 #endif /* MONTY_H */

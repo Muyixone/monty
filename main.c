@@ -23,7 +23,16 @@ int main(int argc, char *argv[])
 	get_stream(argv[1]);
 
 	while (getline(&args_params->string_line, &i, args_params->stream) != -1)
-		printf("%s", args_params->string_line);
+	{
+		args_params->string_line_num += 1;
+		line_tokenization();
+		get_instruction();
+		run_instruction();
+		free_token();
+	}
+		/* printf("%s", args_params->string_line); */
+	stream_exit();
+	free_args();
 
 	return (0);
 }

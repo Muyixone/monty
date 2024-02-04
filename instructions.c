@@ -8,7 +8,7 @@ void get_instruction(void)
 {
 	int i;
 	instruction_t instructions[] = {
-		{"push", &push},
+		{"push", &push}, {"pall", &pall},
 		{NULL, NULL}
 	};
 
@@ -36,8 +36,8 @@ void run_instruction(void)
 {
 	stack_t *stack = NULL;
 
-	if (args_params->num_tokens == 0)
+	if (args_params->num_token == 0)
 		return;
-	
+
 	args_params->instruction->f(&stack, args_params->string_line_num);
 }
